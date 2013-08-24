@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SGSV.DAL;
+using SGSV.Entidades;
 
 namespace SGSV
 {
@@ -14,6 +16,12 @@ namespace SGSV
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void crearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var crearLocalidad = new Localidad.FrmCrearLocalidad();
+            crearLocalidad.ShowDialog();
         }
     }
 }
