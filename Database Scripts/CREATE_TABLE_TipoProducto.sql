@@ -1,0 +1,27 @@
+GO
+
+/****** Object:  Table [dbo].[TipoProducto]    Script Date: 24/08/2013 06:00:50 p.m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[TipoProducto](
+	[idTipoProducto] [int] IDENTITY(1,1) NOT NULL,
+	[nombre] [varchar](100) NOT NULL,
+ CONSTRAINT [PK_Tipo_Producto] PRIMARY KEY CLUSTERED 
+(
+	[idTipoProducto] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

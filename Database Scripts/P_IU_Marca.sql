@@ -19,14 +19,14 @@ GO
 -- Description:	<Alta y Modificación de Marca>
 -- =============================================
 CREATE Procedure [dbo].[P_IU_Marca]    
- @id_marca int,
+ @idMarca int,
  @nombre varchar(100)
 
  AS
 
---Si id_marca es 0 y no existe una marca con el mismo nombre inserto una
+--Si idMarca es 0 y no existe una marca con el mismo nombre inserto una
 --nueva Marca
-IF @id_marca = 0
+IF @idMarca = 0
 	AND NOT EXISTS(	SELECT	nombre
 					FROM	dbo.Marca
 					WHERE	nombre = @nombre)
@@ -46,7 +46,7 @@ BEGIN
 	BEGIN
 		UPDATE	dbo.Marca
 		SET		nombre = @nombre
-		WHERE	id_marca = @id_marca
+		WHERE	idMarca = @idMarca
 	END
 END
 

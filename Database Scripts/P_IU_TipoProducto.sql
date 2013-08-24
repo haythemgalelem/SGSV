@@ -19,14 +19,14 @@ GO
 -- Description:	<Alta y Modificación de Tipo_Producto>
 -- =============================================
 CREATE Procedure [dbo].[P_IU_Tipo_Producto]    
- @id_tipo_producto int,
+ @idTipoProducto int,
  @nombre varchar(100)
 
  AS
 
---Si id_tipo_producto es 0 y no existe un tipo_producto con el mismo nombre inserto un
+--Si idTipoProducto es 0 y no existe un tipo_producto con el mismo nombre inserto un
 --nuevo Tipo_Producto
-IF @id_tipo_producto = 0
+IF @idTipoProducto = 0
 	AND NOT EXISTS(	SELECT	nombre
 					FROM	dbo.Tipo_Producto
 					WHERE	nombre = @nombre)
@@ -46,7 +46,7 @@ BEGIN
 	BEGIN
 		UPDATE	dbo.Tipo_Producto
 		SET		nombre = @nombre
-		WHERE	id_tipo_producto = @id_tipo_producto
+		WHERE	idTipoProducto = @idTipoProducto
 	END
 END
 

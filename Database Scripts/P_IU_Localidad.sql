@@ -18,14 +18,14 @@ GO
 -- Description:	<Alta y Modificación de Localidad>
 -- =============================================
 CREATE Procedure [dbo].[P_IU_Localidad]    
- @id_localidad int,
+ @idLocalidad int,
  @nombre varchar(100)
 
  AS
 
---Si id_localidad es 0 y no existe una localidad con el mismo nombre inserto una
+--Si idLocalidad es 0 y no existe una localidad con el mismo nombre inserto una
 --nueva Localidad
-IF @id_localidad = 0
+IF @idLocalidad = 0
 	AND NOT EXISTS(	SELECT	nombre
 					FROM	dbo.Localidad
 					WHERE	nombre = @nombre)
@@ -45,7 +45,7 @@ BEGIN
 	BEGIN
 		UPDATE	dbo.Localidad
 		SET		nombre = @nombre
-		WHERE	id_localidad = @id_localidad
+		WHERE	idLocalidad = @idLocalidad
 	END
 END
 

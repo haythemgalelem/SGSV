@@ -20,31 +20,31 @@ GO
 -- Description:	<Alta y Modificación de Producto>
 -- =============================================
 CREATE Procedure [dbo].[P_IU_Producto] 
- @id_producto int,
- @id_marca int,
- @id_tipo_producto int,
+ @idProducto int,
+ @idMarca int,
+ @idTipoProducto int,
  @nombre varchar(100),
  @observaciones varchar(250)
 
  AS
 
---Si id_producto es 0 inserto un nuevo Producto
-IF @id_producto = 0
+--Si idProducto es 0 inserto un nuevo Producto
+IF @idProducto = 0
 BEGIN
 	INSERT INTO dbo.Producto
-	(id_marca, id_tipo_producto, nombre, observaciones)
-	VALUES(@id_marca, @id_tipo_producto, @nombre, @observaciones)
+	(idMarca, idTipoProducto, nombre, observaciones)
+	VALUES(@idMarca, @idTipoProducto, @nombre, @observaciones)
 END
 
 ELSE
 --Caso contrario modifico el Producto deseado
 BEGIN
 	UPDATE	dbo.Producto
-	SET		id_marca = @id_marca,
-			id_tipo_producto = @id_tipo_producto,
+	SET		idMarca = @idMarca,
+			idTipoProducto = @idTipoProducto,
 			nombre = @nombre,
 			observaciones = @observaciones
-	WHERE	id_producto = @id_producto
+	WHERE	idProducto = @idProducto
 END
 
 
