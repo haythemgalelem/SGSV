@@ -4,7 +4,7 @@ using System.Web.UI.WebControls;
 
 namespace SGSV
 {
-    public class DalAux : clsDAL
+    public class DalAux : ClsDal
     {
 
         #region Usuarios

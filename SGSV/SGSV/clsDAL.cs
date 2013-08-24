@@ -7,7 +7,7 @@ namespace SGSV
 {
     public class ClsDal
     {
-        private static readonly SqlConnection Conn = new SqlConnection(Properties.Settings.Default.ConnectionString/*ConfigurationManager.AppSettings["ConnectionString"]*/);
+        private static readonly SqlConnection Conn = new SqlConnection(Properties.Settings.Default.ConnectionString);
         private static SqlTransaction _tran;
 
         public static T Exec<T>(string sql, bool isSp, params object[] parametros)
