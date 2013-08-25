@@ -1,7 +1,7 @@
 GO
 
 /****** Object:  StoredProcedure [dbo].[P_IU_Marca]    Script Date: 19/08/2013 01:00:56 p.m. ******/
-DROP PROCEDURE [dbo].[P_IU_Marca]
+DROP PROCEDURE [dbo_sgsv].[P_IU_Marca]
 GO
 
 /****** Object:  StoredProcedure [dbo].[P_IU_Marca]    Script Date: 19/08/2013 01:00:56 p.m. ******/
@@ -18,7 +18,7 @@ GO
 -- Create date: <19/08/2013>
 -- Description:	<Alta y Modificación de Marca>
 -- =============================================
-CREATE Procedure [dbo].[P_IU_Marca]    
+CREATE Procedure [dbo_sgsv].[P_IU_Marca]    
  @idMarca int,
  @nombre varchar(100)
 
@@ -28,10 +28,10 @@ CREATE Procedure [dbo].[P_IU_Marca]
 --nueva Marca
 IF @idMarca = 0
 	AND NOT EXISTS(	SELECT	nombre
-					FROM	dbo.Marca
+					FROM	dbo_sgsv.Marca
 					WHERE	nombre = @nombre)
 BEGIN
-	INSERT INTO dbo.Marca
+	INSERT INTO dbo_sgsv.Marca
 	(nombre)
 	VALUES(@nombre)
 END
@@ -41,10 +41,10 @@ ELSE
 --la Marca deseada
 BEGIN
 	IF NOT EXISTS(	SELECT	nombre
-					FROM	dbo.Marca
+					FROM	dbo_sgsv.Marca
 					WHERE	nombre = @nombre)
 	BEGIN
-		UPDATE	dbo.Marca
+		UPDATE	dbo_sgsv.Marca
 		SET		nombre = @nombre
 		WHERE	idMarca = @idMarca
 	END

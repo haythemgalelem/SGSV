@@ -1,6 +1,14 @@
 GO
 
-/****** Object:  Table [dbo].[TipoEmpleado]    Script Date: 24/08/2013 06:00:28 p.m. ******/
+/****** Object:  Table [dbo_sgsv].[TipoEmpleado]    Script Date: 24/08/2013 06:00:28 p.m. ******/
+
+IF  EXISTS (SELECT * 
+			FROM sys.objects 
+			WHERE object_id = OBJECT_ID(N'dbo_sgsv.TipoEmpleado') 
+				AND type in (N'U')) 
+DROP TABLE [dbo_sgsv].[TipoEmpleado]
+GO
+
 SET ANSI_NULLS ON
 GO
 
@@ -10,9 +18,9 @@ GO
 SET ANSI_PADDING ON
 GO
 
-CREATE TABLE [dbo].[TipoEmpleado](
+CREATE TABLE [dbo_sgsv].[TipoEmpleado](
 	[idTipoEmpleado] [int] IDENTITY(1,1) NOT NULL,
-	[nombre] [varchar](100) NOT NULL,
+	[nombre] [varchar](100) NOT NULL UNIQUE,
  CONSTRAINT [PK_Tipo_Empleado] PRIMARY KEY CLUSTERED 
 (
 	[idTipoEmpleado] ASC

@@ -1,7 +1,7 @@
 GO
 
 /****** Object:  StoredProcedure [dbo].[P_IU_Localidad]    Script Date: 19/08/2013 01:00:23 p.m. ******/
-DROP PROCEDURE [dbo].[P_IU_Localidad]
+DROP PROCEDURE [dbo_sgsv].[P_IU_Localidad]
 GO
 
 /****** Object:  StoredProcedure [dbo].[P_IU_Localidad]    Script Date: 19/08/2013 01:00:23 p.m. ******/
@@ -17,7 +17,7 @@ GO
 -- Create date: <19/08/2013>
 -- Description:	<Alta y Modificación de Localidad>
 -- =============================================
-CREATE Procedure [dbo].[P_IU_Localidad]    
+CREATE Procedure [dbo_sgsv].[P_IU_Localidad]    
  @idLocalidad int,
  @nombre varchar(100)
 
@@ -27,10 +27,10 @@ CREATE Procedure [dbo].[P_IU_Localidad]
 --nueva Localidad
 IF @idLocalidad = 0
 	AND NOT EXISTS(	SELECT	nombre
-					FROM	dbo.Localidad
+					FROM	dbo_sgsv.Localidad
 					WHERE	nombre = @nombre)
 BEGIN
-	INSERT INTO dbo.Localidad
+	INSERT INTO dbo_sgsv.Localidad
 	(nombre)
 	VALUES(@nombre)
 END
@@ -40,10 +40,10 @@ ELSE
 --la Localidad deseada
 BEGIN
 	IF NOT EXISTS(	SELECT	nombre
-					FROM	dbo.Localidad
+					FROM	dbo_sgsv.Localidad
 					WHERE	nombre = @nombre)
 	BEGIN
-		UPDATE	dbo.Localidad
+		UPDATE	dbo_sgsv.Localidad
 		SET		nombre = @nombre
 		WHERE	idLocalidad = @idLocalidad
 	END

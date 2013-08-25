@@ -1,7 +1,7 @@
 GO
 
 /****** Object:  StoredProcedure [dbo].[P_IU_Producto]    Script Date: 19/08/2013 01:07:25 p.m. ******/
-DROP PROCEDURE [dbo].[P_IU_Producto]
+DROP PROCEDURE [dbo_sgsv].[P_IU_Producto]
 GO
 
 /****** Object:  StoredProcedure [dbo].[P_IU_Producto]    Script Date: 19/08/2013 01:07:25 p.m. ******/
@@ -19,7 +19,7 @@ GO
 -- Create date: <19/08/2013>
 -- Description:	<Alta y Modificación de Producto>
 -- =============================================
-CREATE Procedure [dbo].[P_IU_Producto] 
+CREATE Procedure [dbo_sgsv].[P_IU_Producto] 
  @idProducto int,
  @idMarca int,
  @idTipoProducto int,
@@ -31,7 +31,7 @@ CREATE Procedure [dbo].[P_IU_Producto]
 --Si idProducto es 0 inserto un nuevo Producto
 IF @idProducto = 0
 BEGIN
-	INSERT INTO dbo.Producto
+	INSERT INTO dbo_sgsv.Producto
 	(idMarca, idTipoProducto, nombre, observaciones)
 	VALUES(@idMarca, @idTipoProducto, @nombre, @observaciones)
 END
@@ -39,7 +39,7 @@ END
 ELSE
 --Caso contrario modifico el Producto deseado
 BEGIN
-	UPDATE	dbo.Producto
+	UPDATE	dbo_sgsv.Producto
 	SET		idMarca = @idMarca,
 			idTipoProducto = @idTipoProducto,
 			nombre = @nombre,

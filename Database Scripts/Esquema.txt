@@ -1,0 +1,16 @@
+Cree un esquema exclusivo a la BD nuestra para que las tablas no queden
+flotando en un esquema que se comparte para todas las bases de datos.
+
+----------------------------------------------------------------
+
+1) Generar para la base de datos un esquema con nombre dbo_sgsv.
+
+2) Asignarle un usuario existente distinto de SA
+
+----------------------------------------------------------------
+
+Podes probar con esta linea de codigo:
+
+EXEC sys.sp_executesql N'CREATE SCHEMA [dbo_sgsv] AUTHORIZATION [sgsv_admin]'
+
+Siendo sgsv_admin el usuario para ese esquema.

@@ -1,7 +1,7 @@
 GO
 
 /****** Object:  StoredProcedure [dbo].[P_IU_Tipo_Producto]    Script Date: 19/08/2013 01:00:44 p.m. ******/
-DROP PROCEDURE [dbo].[P_IU_Tipo_Producto]
+DROP PROCEDURE [dbo_sgsv].[P_IU_Tipo_Producto]
 GO
 
 /****** Object:  StoredProcedure [dbo].[P_IU_Tipo_Producto]    Script Date: 19/08/2013 01:00:44 p.m. ******/
@@ -18,7 +18,7 @@ GO
 -- Create date: <19/08/2013>
 -- Description:	<Alta y Modificación de Tipo_Producto>
 -- =============================================
-CREATE Procedure [dbo].[P_IU_Tipo_Producto]    
+CREATE Procedure [dbo_sgsv].[P_IU_Tipo_Producto]    
  @idTipoProducto int,
  @nombre varchar(100)
 
@@ -28,10 +28,10 @@ CREATE Procedure [dbo].[P_IU_Tipo_Producto]
 --nuevo Tipo_Producto
 IF @idTipoProducto = 0
 	AND NOT EXISTS(	SELECT	nombre
-					FROM	dbo.Tipo_Producto
+					FROM	dbo_sgsv.TipoProducto
 					WHERE	nombre = @nombre)
 BEGIN
-	INSERT INTO dbo.Tipo_Producto
+	INSERT INTO dbo_sgsv.TipoProducto
 	(nombre)
 	VALUES(@nombre)
 END
@@ -41,10 +41,10 @@ ELSE
 --el Tipo_Producto deseado
 BEGIN
 	IF NOT EXISTS(	SELECT	nombre
-					FROM	dbo.Tipo_Producto
+					FROM	dbo_sgsv.TipoProducto
 					WHERE	nombre = @nombre)
 	BEGIN
-		UPDATE	dbo.Tipo_Producto
+		UPDATE	dbo_sgsv.TipoProducto
 		SET		nombre = @nombre
 		WHERE	idTipoProducto = @idTipoProducto
 	END

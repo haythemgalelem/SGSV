@@ -1,8 +1,7 @@
 GO
 
 /****** Object:  StoredProcedure [dbo].[P_S_Localidad]    Script Date: 24/08/2013 02:32:18 p.m. ******/
-DROP PROCEDURE [dbo].[P_S_Localidad]
-GO
+
 
 /****** Object:  StoredProcedure [dbo].[P_S_Localidad]    Script Date: 24/08/2013 02:32:18 p.m. ******/
 SET ANSI_NULLS ON
@@ -18,7 +17,7 @@ GO
 -- Create date: <23/08/2013>
 -- Description:	<Lectura de Localidades>
 -- =============================================
-CREATE Procedure [dbo].[P_S_Localidad]
+CREATE Procedure [dbo_sgsv].[P_S_Localidad]
 
  AS
 
