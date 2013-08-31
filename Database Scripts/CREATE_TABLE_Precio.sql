@@ -20,7 +20,6 @@ CREATE TABLE [dbo_sgsv].[Precio](
 	[fechaDesde] [date] NOT NULL,
 	[fechaHasta] [date] NULL,
 	[monto] [numeric](10,2) NOT NULL,
-	[inhabilitado] [char] default '0' check (inhabilitado = '0' OR inhabilitado = '1')
 ) ON [PRIMARY]
 
 GO

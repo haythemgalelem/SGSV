@@ -30,13 +30,12 @@ IF EXISTS(	SELECT	*
 			FROM  dbo_sgsv.Precio
 			WHERE idProducto = @idProducto	
 			  AND idSucursal = @idSucursal
-			  AND inhabilitado = '0')
+			  AND fechaHasta IS NULL)
 BEGIN
 	    UPDATE  [dbo_sgsv].Precio
-		SET		inhabilitado = '1',
-				fechaHasta = @fechaHasta
+		SET		fechaHasta = @fechaHasta
 		WHERE	idProducto = @idProducto
 		  AND   idSucursal = @idSucursal
-		  AND   inhabilitado = '0'
+		  AND  fechaHasta IS NULL
 END
 
