@@ -21,9 +21,9 @@ namespace SGSV.DAL
             return Exec<DataSet>("dbo.P_S_Localidad", true, "@nombre", DALAux.GetValue(nombre)).Tables[0];
         }
 
-        public static DataTable GetLocalidad(int idLocalidad)
+        public static DataRow GetLocalidad(int idLocalidad)
         {
-            return Exec<DataSet>("dbo.P_S_Localidad", true, "@idLocalidad", DALAux.GetValue(idLocalidad)).Tables[0];
+            return Exec<DataSet>("dbo.P_S_Localidad", true, "@idLocalidad", DALAux.GetValue(idLocalidad)).Tables[0].Rows[0];
         }
 
         public static void Guardar(int idLocalidad, string nombre)
