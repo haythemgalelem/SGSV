@@ -22,7 +22,7 @@ namespace SGSV.Entidades.Localidad
         {
             var localidad = LocalidadDAL.GetLocalidad(idLocalidad);
             IdLocalidad = Convert.ToInt32(localidad["idLocalidad"].ToString());
-            Nombre = localidad["idLocalidad"].ToString();
+            Nombre = localidad["nombre"].ToString();
         }
 
         public static IEnumerable<Localidad> GetLocalidades()

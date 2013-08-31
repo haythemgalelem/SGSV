@@ -5,7 +5,7 @@ namespace SGSV.Localidad
 {
     public partial class FrmEditarLocalidad : Form
     {
-        protected int IdLocalidad;
+        private Entidades.Localidad.Localidad localidad;
 
         public FrmEditarLocalidad()
         {
@@ -15,7 +15,8 @@ namespace SGSV.Localidad
         public FrmEditarLocalidad(int idLocalidad)
         {
             InitializeComponent();
-            var localidad = Entidades.Localidad.Localidad(idLocalidad);
+            localidad = new Entidades.Localidad.Localidad(idLocalidad);
+            txtNombre.Text = localidad.Nombre;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -25,7 +26,7 @@ namespace SGSV.Localidad
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            var localidad = new Entidades.Localidad.Localidad {Nombre = txtNombre.Text};
+            localidad.Nombre = txtNombre.Text;
             localidad.Guardar();
             Close();
         }

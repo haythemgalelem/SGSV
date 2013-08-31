@@ -23,5 +23,15 @@ namespace SGSV
             var crearLocalidad = new Localidad.FrmEditarLocalidad();
             crearLocalidad.ShowDialog();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Localidad.FrmListarLocalidades().ShowDialog();
+        }
     }
 }

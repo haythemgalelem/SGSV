@@ -9,7 +9,7 @@ namespace SGSV.DAL
     {
         public static IEnumerable<Entidades.Localidad.Localidad> GetLocalidades()
         {
-            return (from DataRow localidad in Exec<DataSet>("dbo.P_S_Localidad", true).Tables[0].Rows
+            return (from DataRow localidad in Exec<DataSet>("dbo_sgsv.P_S_Localidad", true).Tables[0].Rows
                     select new Entidades.Localidad.Localidad
                     {
                         IdLocalidad = Convert.ToInt32(localidad["idLocalidad"].ToString()),
@@ -18,17 +18,17 @@ namespace SGSV.DAL
         }
         public static DataTable GetLocalidades(string nombre)
         {
-            return Exec<DataSet>("dbo.P_S_Localidad", true, "@nombre", DALAux.GetValue(nombre)).Tables[0];
+            return Exec<DataSet>("dbo_sgsv.P_S_Localidad", true, "@nombre", DALAux.GetValue(nombre)).Tables[0];
         }
 
         public static DataRow GetLocalidad(int idLocalidad)
         {
-            return Exec<DataSet>("dbo.P_S_Localidad", true, "@idLocalidad", DALAux.GetValue(idLocalidad)).Tables[0].Rows[0];
+            return Exec<DataSet>("dbo_sgsv.P_S_Localidad", true, "@idLocalidad", DALAux.GetValue(idLocalidad)).Tables[0].Rows[0];
         }
 
         public static void Guardar(int idLocalidad, string nombre)
         {
-            Exec<DataSet>("dbo.P_IU_Localidad", true, "@idLocalidad", DALAux.GetValue(idLocalidad), "@nombre", DALAux.GetValue(nombre));
+            Exec<DataSet>("dbo_sgsv.P_IU_Localidad", true, "@idLocalidad", DALAux.GetValue(idLocalidad), "@nombre", DALAux.GetValue(nombre));
         }
     }
 }

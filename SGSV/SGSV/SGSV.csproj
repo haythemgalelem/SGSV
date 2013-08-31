@@ -66,6 +66,12 @@
     <Compile Include="Localidad\Editar Localidad.Designer.cs">
       <DependentUpon>Editar Localidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Localidad\Listar Localidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localidad\Listar Localidades.Designer.cs">
+      <DependentUpon>Listar Localidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -73,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Localidad\Editar Localidad.resx">
       <DependentUpon>Editar Localidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localidad\Listar Localidades.resx">
+      <DependentUpon>Listar Localidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
