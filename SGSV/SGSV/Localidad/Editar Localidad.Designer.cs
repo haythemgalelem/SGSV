@@ -1,6 +1,6 @@
 ﻿namespace SGSV.Localidad
 {
-    partial class FrmCrearLocalidad
+    partial class FrmEditarLocalidad
     {
         /// <summary>
         /// Required designer variable.

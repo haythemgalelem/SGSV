@@ -3,11 +3,19 @@ using System.Windows.Forms;
 
 namespace SGSV.Localidad
 {
-    public partial class FrmCrearLocalidad : Form
+    public partial class FrmEditarLocalidad : Form
     {
-        public FrmCrearLocalidad()
+        protected int IdLocalidad;
+
+        public FrmEditarLocalidad()
         {
             InitializeComponent();
+        }
+
+        public FrmEditarLocalidad(int idLocalidad)
+        {
+            InitializeComponent();
+            var localidad = Entidades.Localidad.Localidad(idLocalidad);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

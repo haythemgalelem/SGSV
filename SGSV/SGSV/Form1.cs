@@ -20,7 +20,7 @@ namespace SGSV
 
         private void crearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var crearLocalidad = new Localidad.FrmCrearLocalidad();
+            var crearLocalidad = new Localidad.FrmEditarLocalidad();
             crearLocalidad.ShowDialog();
         }
     }
