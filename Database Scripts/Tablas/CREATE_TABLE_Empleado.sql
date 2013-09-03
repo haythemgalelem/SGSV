@@ -26,7 +26,7 @@ CREATE TABLE [dbo_sgsv].[Empleado](
 	[telefono] [nvarchar](30) NOT NULL,
 	[email] [varchar](50) NOT NULL,
 	[dni] [numeric] (8,0) NOT NULL UNIQUE,
-	[inhabilitado] [char] default '0' check (inhabilitado = '0' OR inhabilitado = '1')
+	[habilitado] [char] default '1' check (habilitado = '0' OR habilitado = '1')
  CONSTRAINT [PK_Empleado] PRIMARY KEY CLUSTERED 
 (
 	[idEmpleado] ASC
@@ -36,20 +36,6 @@ CREATE TABLE [dbo_sgsv].[Empleado](
 GO
 
 SET ANSI_PADDING OFF
-GO
-
-ALTER TABLE [dbo_sgsv].[Empleado]  WITH CHECK ADD  CONSTRAINT [FK_Empleado_Sucursal] FOREIGN KEY([idSucursal])
-REFERENCES [dbo_sgsv].[Sucursal] ([idSucursal])
-GO
-
-ALTER TABLE [dbo_sgsv].[Empleado] CHECK CONSTRAINT [FK_Empleado_Sucursal]
-GO
-
-ALTER TABLE [dbo_sgsv].[Empleado]  WITH CHECK ADD  CONSTRAINT [FK_Empleado_Tipo_Empleado] FOREIGN KEY([idTipoEmpleado])
-REFERENCES [dbo_sgsv].[TipoEmpleado] ([idTipoEmpleado])
-GO
-
-ALTER TABLE [dbo_sgsv].[Empleado] CHECK CONSTRAINT [FK_Empleado_Tipo_Empleado]
 GO
 
 

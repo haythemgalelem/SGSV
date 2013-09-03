@@ -1,4 +1,3 @@
-USE [SGSV_DEV]
 GO
 /****** Object:  StoredProcedure [dbo_sgsv].[P_B_Producto]    Script Date: 08/24/2013 19:29:20 ******/
 DROP PROCEDURE [dbo_sgsv].[P_B_Producto]
@@ -18,7 +17,7 @@ CREATE Procedure [dbo_sgsv].[P_B_Producto]
  @idProducto int
  
  AS
-	    UPDATE  [dbo_sgsv].Producto
-		SET		inhabilitado = '1'
+	    UPDATE  dbo_sgsv.Producto
+		SET		habilitado = '0'
 		WHERE	idProducto = @idProducto
 

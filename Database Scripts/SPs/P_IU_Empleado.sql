@@ -1,4 +1,3 @@
-USE [SGSV_DEV]
 GO
 /****** Object:  StoredProcedure [dbo_sgsv].[P_IU_Empleado] */
 DROP PROCEDURE [dbo_sgsv].[P_IU_Empleado]
@@ -36,10 +35,20 @@ IF @idEmpleado = 0
                WHERE dni = @dni)
 BEGIN
 	INSERT INTO dbo_sgsv.Empleado
-	(idTipoEmpleado, idSucursal, nombre, 
-	 apellido, telefono, email, dni)
-	VALUES(@idTipoEmpleado, @idSucursal, @nombre, @apellido,
-	       @telefono, @email, @dni)
+			   (idTipoEmpleado,
+			    idSucursal,
+				nombre, 
+				apellido,
+				telefono,
+				email,
+				dni)
+	VALUES	   (@idTipoEmpleado,
+				@idSucursal,
+				@nombre,
+				@apellido,
+				@telefono,
+				@email,
+				@dni)
 END
 
 ELSE
@@ -47,10 +56,10 @@ ELSE
 -- sabemos que se trata de una modificación a los datos de la misma.
 -- NO PUEDE MODIFICAR LOS CAMPOS NOMBRE, APELLIDO Y DNI PARA ESE EMPLEADO
 BEGIN
-	IF @idEmpleado != 0
+	IF @idEmpleado <> 0
 					 
 	BEGIN
-		UPDATE  [dbo_sgsv].Empleado
+		UPDATE  dbo_sgsv.Empleado
 		SET		idTipoEmpleado = @idTipoEmpleado,
 				idSucursal = @idSucursal,
 		        telefono = @telefono,

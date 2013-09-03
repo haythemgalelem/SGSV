@@ -1,10 +1,10 @@
 GO
 
-/****** Object:  StoredProcedure [dbo].[P_IU_Localidad]    Script Date: 19/08/2013 01:00:23 p.m. ******/
+/****** Object:  StoredProcedure [dbo_sgsv].[P_IU_Localidad]    Script Date: 19/08/2013 01:00:23 p.m. ******/
 DROP PROCEDURE [dbo_sgsv].[P_IU_Localidad]
 GO
 
-/****** Object:  StoredProcedure [dbo].[P_IU_Localidad]    Script Date: 19/08/2013 01:00:23 p.m. ******/
+/****** Object:  StoredProcedure [dbo_sgsv].[P_IU_Localidad]    Script Date: 19/08/2013 01:00:23 p.m. ******/
 SET ANSI_NULLS ON
 GO
 

@@ -1,4 +1,3 @@
-USE [SGSV_DEV]
 GO
 /****** Object:  StoredProcedure [dbo_sgsv].[P_IU_Localidad]    Script Date: 08/24/2013 19:29:20 ******/
 DROP PROCEDURE [dbo_sgsv].[P_IU_Sucursal]
@@ -42,9 +41,9 @@ ELSE
 -- Caso contrario, si manda un idSucursal distinta de 0, entonces
 -- sabemos que se trata de una modificación a los datos de la misma
 BEGIN
-	IF @idSucursal != 0 
+	IF @idSucursal <> 0 
 	BEGIN
-		UPDATE  [dbo_sgsv].Sucursal
+		UPDATE  dbo_sgsv.Sucursal
 		SET		nombre = @nombre,
 				direccion = @direccion,
 				idLocalidad = @idLocalidad,

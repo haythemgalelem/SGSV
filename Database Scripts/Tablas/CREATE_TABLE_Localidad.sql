@@ -20,7 +20,7 @@ GO
 
 CREATE TABLE [dbo_sgsv].[Localidad](
 	[idLocalidad] [int] IDENTITY(1,1) NOT NULL,
-	[nombre] [varchar](100) NOT NULL,
+	[nombre] [varchar](100) NOT NULL UNIQUE,
  CONSTRAINT [PK_Localidad] PRIMARY KEY CLUSTERED 
 (
 	[idLocalidad] ASC

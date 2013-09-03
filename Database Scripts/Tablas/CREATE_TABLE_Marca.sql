@@ -19,7 +19,7 @@ GO
 
 CREATE TABLE [dbo_sgsv].[Marca](
 	[idMarca] [int] IDENTITY(1,1) NOT NULL,
-	[nombre] [varchar](100) NOT NULL,
+	[nombre] [varchar](100) NOT NULL UNIQUE,
  CONSTRAINT [PK_Marca] PRIMARY KEY CLUSTERED 
 (
 	[idMarca] ASC

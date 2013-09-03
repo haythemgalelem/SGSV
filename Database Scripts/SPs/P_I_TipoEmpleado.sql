@@ -1,4 +1,3 @@
-USE [SGSV_DEV]
 GO
 /****** Object:  StoredProcedure [dbo_sgsv].[P_IU_Localidad]    Script Date: 08/24/2013 19:29:20 ******/
 DROP PROCEDURE [dbo_sgsv].[P_I_TipoEmpleado]
@@ -26,7 +25,7 @@ IF NOT EXISTS(	SELECT	nombre
 				WHERE	nombre = @nombre)
 BEGIN
 	INSERT INTO dbo_sgsv.TipoEmpleado
-	(nombre)
-	VALUES(@nombre)
+			   (nombre)
+	VALUES	   (@nombre)
 END
 

@@ -25,7 +25,7 @@ CREATE TABLE [dbo_sgsv].[Cliente](
 	[telefono] [nvarchar](30) NOT NULL,
 	[email] [varchar](50) NOT NULL,
 	[direccion] [varchar](100) NOT NULL,
-	[inhabilitado] [char] default '0' check (inhabilitado = '0' OR inhabilitado = '1')
+	[habilitado] [char] default '1' check (habilitado = '0' OR habilitado = '1')
  CONSTRAINT [PK_Cliente] PRIMARY KEY CLUSTERED 
 (
 	[idCliente] ASC
@@ -35,13 +35,6 @@ CREATE TABLE [dbo_sgsv].[Cliente](
 GO
 
 SET ANSI_PADDING OFF
-GO
-
-ALTER TABLE [dbo_sgsv].[Cliente]  WITH CHECK ADD  CONSTRAINT [FK_Cliente_Localidad] FOREIGN KEY([idLocalidad])
-REFERENCES [dbo_sgsv].[Localidad] ([idLocalidad])
-GO
-
-ALTER TABLE [dbo_sgsv].[Cliente] CHECK CONSTRAINT [FK_Cliente_Localidad]
 GO
 
 

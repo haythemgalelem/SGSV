@@ -24,18 +24,3 @@ CREATE TABLE [dbo_sgsv].[Precio](
 
 GO
 
-ALTER TABLE [dbo_sgsv].[Precio]  WITH CHECK ADD  CONSTRAINT [FK_Precio_Producto] FOREIGN KEY([idProducto])
-REFERENCES [dbo_sgsv].[Producto] ([idProducto])
-GO
-
-ALTER TABLE [dbo_sgsv].[Precio] CHECK CONSTRAINT [FK_Precio_Producto]
-GO
-
-ALTER TABLE [dbo_sgsv].[Precio]  WITH CHECK ADD  CONSTRAINT [FK_Precio_Sucursal] FOREIGN KEY([idSucursal])
-REFERENCES [dbo_sgsv].[Sucursal] ([idSucursal])
-GO
-
-ALTER TABLE [dbo_sgsv].[Precio] CHECK CONSTRAINT [FK_Precio_Sucursal]
-GO
-
-

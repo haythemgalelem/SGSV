@@ -1,4 +1,3 @@
-USE [SGSV_DEV]
 GO
 /****** Object:  StoredProcedure [dbo_sgsv].[P_IU_Localidad]    Script Date: 08/24/2013 19:29:20 ******/
 DROP PROCEDURE [dbo_sgsv].[P_IU_Cliente]
@@ -36,17 +35,27 @@ IF @idCliente = 0
 					  AND   telefono = @telefono)
 BEGIN
 	INSERT INTO dbo_sgsv.Cliente
-	(nombre, apellido, telefono, email, direccion, idLocalidad)
-	VALUES(@nombre, @apellido, @telefono, @email, @direccion, @idLocalidad)
+			   (nombre,
+				apellido,
+				telefono,
+				email,
+				direccion,
+				idLocalidad)
+	VALUES	   (@nombre,
+				@apellido,
+				@telefono,
+				@email,
+				@direccion,
+				@idLocalidad)
 END
 
 ELSE
 -- Caso contrario, si manda un idCliente distinto de 0, entonces
 -- sabemos que se trata de una modificación a los datos del mismo
 BEGIN
-	IF @idCliente != 0 
+	IF @idCliente <> 0 
 	BEGIN
-		UPDATE  [dbo_sgsv].Cliente
+		UPDATE  dbo_sgsv.Cliente
 		SET		nombre = @nombre,
 		        apellido = @apellido,
 		        telefono = @telefono,

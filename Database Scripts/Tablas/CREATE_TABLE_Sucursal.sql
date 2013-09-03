@@ -26,7 +26,7 @@ CREATE TABLE [dbo_sgsv].[Sucursal](
 	[telefono] [nvarchar](30) NOT NULL,
 	[email] [varchar](50) NOT NULL,
 	[codigo_postal] [varchar](15) NOT NULL,
-	[inhabilitado] [char] default '0' check (inhabilitado = '0' OR inhabilitado = '1')
+	[habilitado] [char] default '1' check (habilitado = '0' OR habilitado = '1')
  CONSTRAINT [PK_Sucursal] PRIMARY KEY CLUSTERED 
 (
 	[idSucursal] ASC
@@ -36,13 +36,6 @@ CREATE TABLE [dbo_sgsv].[Sucursal](
 GO
 
 SET ANSI_PADDING OFF
-GO
-
-ALTER TABLE [dbo_sgsv].[Sucursal]  WITH CHECK ADD  CONSTRAINT [FK_Sucursal_Localidad] FOREIGN KEY([idLocalidad])
-REFERENCES [dbo_sgsv].[Localidad] ([idLocalidad])
-GO
-
-ALTER TABLE [dbo_sgsv].[Sucursal] CHECK CONSTRAINT [FK_Sucursal_Localidad]
 GO
 
 

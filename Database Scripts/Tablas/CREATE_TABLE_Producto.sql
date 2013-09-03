@@ -23,7 +23,7 @@ CREATE TABLE [dbo_sgsv].[Producto](
 	[idTipoProducto] [int] NOT NULL,
 	[nombre] [varchar](100) NOT NULL,
 	[observaciones] [varchar](250) NOT NULL,
-	[inhabilitado] [char] default '0' check (inhabilitado = '0' OR inhabilitado = '1')
+	[habilitado] [char] default '1' check (habilitado = '0' OR habilitado = '1')
  CONSTRAINT [PK_Producto] PRIMARY KEY CLUSTERED 
 (
 	[idProducto] ASC
@@ -33,20 +33,6 @@ CREATE TABLE [dbo_sgsv].[Producto](
 GO
 
 SET ANSI_PADDING OFF
-GO
-
-ALTER TABLE [dbo_sgsv].[Producto]  WITH CHECK ADD  CONSTRAINT [FK_Producto_Marca] FOREIGN KEY([idMarca])
-REFERENCES [dbo_sgsv].[Marca] ([idMarca])
-GO
-
-ALTER TABLE [dbo_sgsv].[Producto] CHECK CONSTRAINT [FK_Producto_Marca]
-GO
-
-ALTER TABLE [dbo_sgsv].[Producto]  WITH CHECK ADD  CONSTRAINT [FK_Producto_Tipo_Producto] FOREIGN KEY([idTipoProducto])
-REFERENCES [dbo_sgsv].[TipoProducto] ([idTipoProducto])
-GO
-
-ALTER TABLE [dbo_sgsv].[Producto] CHECK CONSTRAINT [FK_Producto_Tipo_Producto]
 GO
 
 
