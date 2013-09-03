@@ -17,7 +17,7 @@ GO
 -- Create date: <23/08/2013>
 -- Description:	<Lectura de Localidades>
 -- =============================================
-CREATE Procedure [dbo_sgsv.[P_S_Localidad]
+CREATE Procedure [dbo_sgsv].[P_S_Localidad]
 
  AS
 
