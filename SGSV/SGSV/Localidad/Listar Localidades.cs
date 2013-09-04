@@ -3,22 +3,42 @@ using System.Windows.Forms;
 
 namespace SGSV.Localidad
 {
-    public partial class FrmListarLocalidades : Form
+    public partial class frmListarLocalidades : Form
     {
-        public FrmListarLocalidades()
+        public frmListarLocalidades()
         {
             InitializeComponent();
         }
 
-        private void Listar_Localidades_Load(object sender, EventArgs e)
+        protected void Cargar()
         {
             dgvLocalidades.DataSource = Entidades.Localidad.Localidad.GetLocalidades();
             dgvLocalidades.Columns[0].Visible = false;
+            dgvLocalidades.Columns[1].Width = dgvLocalidades.Width - 45;
         }
 
-        private void modificarLocalidadToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Listar_Localidades_Load(object sender, EventArgs e)
         {
-            new FrmEditarLocalidad(Convert.ToInt32(dgvLocalidades.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
+            Cargar();
+        }
+
+        private void mnuModificarLocalidad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new frmEditarLocalidad(Convert.ToInt32(dgvLocalidades.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
+                Cargar();
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
+
+        private void mnuCrearLocalidad_Click(object sender, EventArgs e)
+        {
+            new frmEditarLocalidad().ShowDialog();
+            Cargar();
         }
     }
 }

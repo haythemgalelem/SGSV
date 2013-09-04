@@ -3,16 +3,17 @@ using System.Windows.Forms;
 
 namespace SGSV.Localidad
 {
-    public partial class FrmEditarLocalidad : Form
+    public partial class frmEditarLocalidad : Form
     {
         private Entidades.Localidad.Localidad localidad;
 
-        public FrmEditarLocalidad()
+        public frmEditarLocalidad()
         {
             InitializeComponent();
+            localidad = new Entidades.Localidad.Localidad();
         }
 
-        public FrmEditarLocalidad(int idLocalidad)
+        public frmEditarLocalidad(int idLocalidad)
         {
             InitializeComponent();
             localidad = new Entidades.Localidad.Localidad(idLocalidad);

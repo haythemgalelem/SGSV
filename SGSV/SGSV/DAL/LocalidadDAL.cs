@@ -28,7 +28,7 @@ namespace SGSV.DAL
 
         public static void Guardar(int idLocalidad, string nombre)
         {
-            Exec<DataSet>("dbo_sgsv.P_IU_Localidad", true, "@idLocalidad", DALAux.GetValue(idLocalidad), "@nombre", DALAux.GetValue(nombre));
+            Exec<DataSet>("dbo_sgsv.P_IU_Localidad", true, "@idLocalidad", idLocalidad, "@nombre", nombre);
         }
     }
 }

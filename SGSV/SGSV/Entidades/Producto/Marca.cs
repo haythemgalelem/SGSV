@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using SGSV.DAL;
 
 namespace SGSV.Entidades.Producto
@@ -10,15 +11,31 @@ namespace SGSV.Entidades.Producto
         public int IdMarca { get; set; }
         public string Nombre { get; set; }
 
+        public Marca()
+        {
+        }
+
+        public Marca(int idMarca)
+        {
+            Cargar(idMarca);
+        }
+
+        public void Cargar(int idMarca)
+        {
+            var marca = ProductoDAL.GetMarca(idMarca);
+            IdMarca = Convert.ToInt32(marca["idMarca"].ToString());
+            Nombre = marca["nombre"].ToString();
+        }
+
         public static IEnumerable<Marca> GetMarcas()
         {
-            var lista = new List<Marca>();//DAL.Marca.GetMarcas();
-            foreach (DataRow marca in ProductoDAL.GetMarcas().Rows)
-            {
-                lista.Add(new Marca { IdMarca = Convert.ToInt32(marca["id_Marca"].ToString()), Nombre = marca["nombre"].ToString() });
-            }
-
-            return lista;
+            return (from DataRow marca in ProductoDAL.GetMarcas().Rows
+                    select
+                        new Marca
+                            {
+                                IdMarca = Convert.ToInt32(marca["id_Marca"].ToString()),
+                                Nombre = marca["nombre"].ToString()
+                            }).ToList();
         }
 
         public void Guardar()

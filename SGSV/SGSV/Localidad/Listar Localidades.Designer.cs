@@ -1,6 +1,6 @@
 ﻿namespace SGSV.Localidad
 {
-    partial class FrmListarLocalidades
+    partial class frmListarLocalidades
     {
         /// <summary>
         /// Required designer variable.
@@ -29,51 +29,68 @@
         private void InitializeComponent()
         {
             this.dgvLocalidades = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.modificarLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLocalidad = new System.Windows.Forms.MenuStrip();
+            this.mnuCrearLocalidad = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuModificarLocalidad = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalidades)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.menuLocalidad.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvLocalidades
             // 
             this.dgvLocalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLocalidades.Location = new System.Drawing.Point(218, 109);
+            this.dgvLocalidades.Location = new System.Drawing.Point(0, 32);
+            this.dgvLocalidades.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLocalidades.Name = "dgvLocalidades";
-            this.dgvLocalidades.Size = new System.Drawing.Size(240, 275);
+            this.dgvLocalidades.Size = new System.Drawing.Size(320, 338);
             this.dgvLocalidades.TabIndex = 0;
             // 
-            // menuStrip1
+            // menuLocalidad
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarLocalidadToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(795, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuLocalidad.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuCrearLocalidad,
+            this.mnuModificarLocalidad});
+            this.menuLocalidad.Location = new System.Drawing.Point(0, 0);
+            this.menuLocalidad.Name = "menuLocalidad";
+            this.menuLocalidad.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuLocalidad.Size = new System.Drawing.Size(321, 28);
+            this.menuLocalidad.TabIndex = 1;
             // 
-            // modificarLocalidadToolStripMenuItem
+            // mnuCrearLocalidad
             // 
-            this.modificarLocalidadToolStripMenuItem.Name = "modificarLocalidadToolStripMenuItem";
-            this.modificarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(124, 20);
-            this.modificarLocalidadToolStripMenuItem.Text = "Modificar Localidad";
-            this.modificarLocalidadToolStripMenuItem.Click += new System.EventHandler(this.modificarLocalidadToolStripMenuItem_Click);
+            this.mnuCrearLocalidad.Name = "mnuCrearLocalidad";
+            this.mnuCrearLocalidad.Size = new System.Drawing.Size(125, 24);
+            this.mnuCrearLocalidad.Text = "Crear Localidad";
+            this.mnuCrearLocalidad.Click += new System.EventHandler(this.mnuCrearLocalidad_Click);
             // 
-            // FrmListarLocalidades
+            // mnuModificarLocalidad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.mnuModificarLocalidad.Name = "mnuModificarLocalidad";
+            this.mnuModificarLocalidad.Size = new System.Drawing.Size(154, 24);
+            this.mnuModificarLocalidad.Text = "Modificar Localidad";
+            this.mnuModificarLocalidad.Click += new System.EventHandler(this.mnuModificarLocalidad_Click);
+            // 
+            // frmListarLocalidades
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 466);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(321, 371);
             this.Controls.Add(this.dgvLocalidades);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FrmListarLocalidades";
-            this.Text = "Listar_Localidades";
+            this.Controls.Add(this.menuLocalidad);
+            this.MainMenuStrip = this.menuLocalidad;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmListarLocalidades";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Listar Localidades";
             this.Load += new System.EventHandler(this.Listar_Localidades_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalidades)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuLocalidad.ResumeLayout(false);
+            this.menuLocalidad.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,7 +99,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvLocalidades;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem modificarLocalidadToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuLocalidad;
+        private System.Windows.Forms.ToolStripMenuItem mnuModificarLocalidad;
+        private System.Windows.Forms.ToolStripMenuItem mnuCrearLocalidad;
     }
 }
