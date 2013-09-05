@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\SucursalDAL.cs" />
     <Compile Include="DAL\clsDAL.cs" />
     <Compile Include="DAL\DALAux.cs" />
     <Compile Include="DAL\LocalidadDAL.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Entidades\Producto\Marca.cs" />
     <Compile Include="Entidades\Producto\Producto.cs" />
     <Compile Include="Entidades\Producto\TipoProducto.cs" />
+    <Compile Include="Entidades\Sucursal\Sucursal.cs" />
     <Compile Include="SGSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +76,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sucursal\Crear Sucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucursal\Crear Sucursal.Designer.cs">
+      <DependentUpon>Crear Sucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursal\ListarSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucursal\ListarSucursales.Designer.cs">
+      <DependentUpon>ListarSucursales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursal\Modificar Sucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucursal\Modificar Sucursal.Designer.cs">
+      <DependentUpon>Modificar Sucursal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="SGSV.resx">
       <DependentUpon>SGSV.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +112,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Sucursal\Crear Sucursal.resx">
+      <DependentUpon>Crear Sucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucursal\ListarSucursales.resx">
+      <DependentUpon>ListarSucursales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucursal\Modificar Sucursal.resx">
+      <DependentUpon>Modificar Sucursal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

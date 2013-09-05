@@ -64,8 +64,8 @@
             this.mnuProducto});
             this.menuSGSV.Location = new System.Drawing.Point(0, 0);
             this.menuSGSV.Name = "menuSGSV";
-            this.menuSGSV.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuSGSV.Size = new System.Drawing.Size(811, 28);
+            this.menuSGSV.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuSGSV.Size = new System.Drawing.Size(608, 24);
             this.menuSGSV.TabIndex = 2;
             // 
             // mnuSucursal
@@ -74,20 +74,22 @@
             this.crearSucursal,
             this.listarSucursal});
             this.mnuSucursal.Name = "mnuSucursal";
-            this.mnuSucursal.Size = new System.Drawing.Size(75, 24);
+            this.mnuSucursal.Size = new System.Drawing.Size(63, 20);
             this.mnuSucursal.Text = "Sucursal";
             // 
             // crearSucursal
             // 
             this.crearSucursal.Name = "crearSucursal";
-            this.crearSucursal.Size = new System.Drawing.Size(113, 24);
+            this.crearSucursal.Size = new System.Drawing.Size(152, 22);
             this.crearSucursal.Text = "Crear";
+            this.crearSucursal.Click += new System.EventHandler(this.crearSucursal_Click);
             // 
             // listarSucursal
             // 
             this.listarSucursal.Name = "listarSucursal";
-            this.listarSucursal.Size = new System.Drawing.Size(113, 24);
+            this.listarSucursal.Size = new System.Drawing.Size(152, 22);
             this.listarSucursal.Text = "Listar";
+            this.listarSucursal.Click += new System.EventHandler(this.listarSucursal_Click);
             // 
             // mnuEmpleado
             // 
@@ -95,7 +97,7 @@
             this.mniTipoEmpleado,
             this.mniEmpleado});
             this.mnuEmpleado.Name = "mnuEmpleado";
-            this.mnuEmpleado.Size = new System.Drawing.Size(89, 24);
+            this.mnuEmpleado.Size = new System.Drawing.Size(72, 20);
             this.mnuEmpleado.Text = "Empleado";
             // 
             // mniTipoEmpleado
@@ -104,19 +106,19 @@
             this.mniCrearTipoEmpleado,
             this.mniListarTipoEmpleado});
             this.mniTipoEmpleado.Name = "mniTipoEmpleado";
-            this.mniTipoEmpleado.Size = new System.Drawing.Size(180, 24);
+            this.mniTipoEmpleado.Size = new System.Drawing.Size(154, 22);
             this.mniTipoEmpleado.Text = "Tipo Empleado";
             // 
             // mniCrearTipoEmpleado
             // 
             this.mniCrearTipoEmpleado.Name = "mniCrearTipoEmpleado";
-            this.mniCrearTipoEmpleado.Size = new System.Drawing.Size(113, 24);
+            this.mniCrearTipoEmpleado.Size = new System.Drawing.Size(102, 22);
             this.mniCrearTipoEmpleado.Text = "Crear";
             // 
             // mniListarTipoEmpleado
             // 
             this.mniListarTipoEmpleado.Name = "mniListarTipoEmpleado";
-            this.mniListarTipoEmpleado.Size = new System.Drawing.Size(113, 24);
+            this.mniListarTipoEmpleado.Size = new System.Drawing.Size(102, 22);
             this.mniListarTipoEmpleado.Text = "Listar";
             // 
             // mniEmpleado
@@ -125,19 +127,19 @@
             this.mniCrearEmpleado,
             this.mniListarEmpleado});
             this.mniEmpleado.Name = "mniEmpleado";
-            this.mniEmpleado.Size = new System.Drawing.Size(180, 24);
+            this.mniEmpleado.Size = new System.Drawing.Size(154, 22);
             this.mniEmpleado.Text = "Empleado";
             // 
             // mniCrearEmpleado
             // 
             this.mniCrearEmpleado.Name = "mniCrearEmpleado";
-            this.mniCrearEmpleado.Size = new System.Drawing.Size(113, 24);
+            this.mniCrearEmpleado.Size = new System.Drawing.Size(102, 22);
             this.mniCrearEmpleado.Text = "Crear";
             // 
             // mniListarEmpleado
             // 
             this.mniListarEmpleado.Name = "mniListarEmpleado";
-            this.mniListarEmpleado.Size = new System.Drawing.Size(113, 24);
+            this.mniListarEmpleado.Size = new System.Drawing.Size(102, 22);
             this.mniListarEmpleado.Text = "Listar";
             // 
             // mnuLocalidad
@@ -146,20 +148,20 @@
             this.mniCrearLocalidad,
             this.mniListarLocalidad});
             this.mnuLocalidad.Name = "mnuLocalidad";
-            this.mnuLocalidad.Size = new System.Drawing.Size(86, 24);
+            this.mnuLocalidad.Size = new System.Drawing.Size(70, 20);
             this.mnuLocalidad.Text = "Localidad";
             // 
             // mniCrearLocalidad
             // 
             this.mniCrearLocalidad.Name = "mniCrearLocalidad";
-            this.mniCrearLocalidad.Size = new System.Drawing.Size(152, 24);
+            this.mniCrearLocalidad.Size = new System.Drawing.Size(102, 22);
             this.mniCrearLocalidad.Text = "Crear";
             this.mniCrearLocalidad.Click += new System.EventHandler(this.mniCrearLocalidad_Click);
             // 
             // mniListarLocalidad
             // 
             this.mniListarLocalidad.Name = "mniListarLocalidad";
-            this.mniListarLocalidad.Size = new System.Drawing.Size(152, 24);
+            this.mniListarLocalidad.Size = new System.Drawing.Size(102, 22);
             this.mniListarLocalidad.Text = "Listar";
             this.mniListarLocalidad.Click += new System.EventHandler(this.mniListarLocalidad_Click);
             // 
@@ -170,7 +172,7 @@
             this.mniTipoProducto,
             this.mniProducto});
             this.mnuProducto.Name = "mnuProducto";
-            this.mnuProducto.Size = new System.Drawing.Size(81, 24);
+            this.mnuProducto.Size = new System.Drawing.Size(68, 20);
             this.mnuProducto.Text = "Producto";
             // 
             // mniMarca
@@ -179,19 +181,19 @@
             this.mniCrearMarca,
             this.mniListarMarca});
             this.mniMarca.Name = "mniMarca";
-            this.mniMarca.Size = new System.Drawing.Size(172, 24);
+            this.mniMarca.Size = new System.Drawing.Size(150, 22);
             this.mniMarca.Text = "Marca";
             // 
             // mniCrearMarca
             // 
             this.mniCrearMarca.Name = "mniCrearMarca";
-            this.mniCrearMarca.Size = new System.Drawing.Size(113, 24);
+            this.mniCrearMarca.Size = new System.Drawing.Size(102, 22);
             this.mniCrearMarca.Text = "Crear";
             // 
             // mniListarMarca
             // 
             this.mniListarMarca.Name = "mniListarMarca";
-            this.mniListarMarca.Size = new System.Drawing.Size(113, 24);
+            this.mniListarMarca.Size = new System.Drawing.Size(102, 22);
             this.mniListarMarca.Text = "Listar";
             // 
             // mniTipoProducto
@@ -200,19 +202,19 @@
             this.mniCrearTipoProducto,
             this.mniListarTipoProducto});
             this.mniTipoProducto.Name = "mniTipoProducto";
-            this.mniTipoProducto.Size = new System.Drawing.Size(172, 24);
+            this.mniTipoProducto.Size = new System.Drawing.Size(150, 22);
             this.mniTipoProducto.Text = "Tipo Producto";
             // 
             // mniCrearTipoProducto
             // 
             this.mniCrearTipoProducto.Name = "mniCrearTipoProducto";
-            this.mniCrearTipoProducto.Size = new System.Drawing.Size(113, 24);
+            this.mniCrearTipoProducto.Size = new System.Drawing.Size(102, 22);
             this.mniCrearTipoProducto.Text = "Crear";
             // 
             // mniListarTipoProducto
             // 
             this.mniListarTipoProducto.Name = "mniListarTipoProducto";
-            this.mniListarTipoProducto.Size = new System.Drawing.Size(113, 24);
+            this.mniListarTipoProducto.Size = new System.Drawing.Size(102, 22);
             this.mniListarTipoProducto.Text = "Listar";
             // 
             // mniProducto
@@ -221,29 +223,29 @@
             this.mniCrearProducto,
             this.mniListarProducto});
             this.mniProducto.Name = "mniProducto";
-            this.mniProducto.Size = new System.Drawing.Size(172, 24);
+            this.mniProducto.Size = new System.Drawing.Size(150, 22);
             this.mniProducto.Text = "Producto";
             // 
             // mniCrearProducto
             // 
             this.mniCrearProducto.Name = "mniCrearProducto";
-            this.mniCrearProducto.Size = new System.Drawing.Size(113, 24);
+            this.mniCrearProducto.Size = new System.Drawing.Size(102, 22);
             this.mniCrearProducto.Text = "Crear";
             // 
             // mniListarProducto
             // 
             this.mniListarProducto.Name = "mniListarProducto";
-            this.mniListarProducto.Size = new System.Drawing.Size(113, 24);
+            this.mniListarProducto.Size = new System.Drawing.Size(102, 22);
             this.mniListarProducto.Text = "Listar";
             // 
             // frmSGSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 529);
+            this.ClientSize = new System.Drawing.Size(608, 430);
             this.Controls.Add(this.menuSGSV);
             this.MainMenuStrip = this.menuSGSV;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmSGSV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SGSV";

@@ -27,5 +27,15 @@ namespace SGSV
         {
             new Localidad.frmListarLocalidades().ShowDialog();
         }
+
+        private void crearSucursal_Click(object sender, EventArgs e)
+        {
+            new Sucursal.frmCrearSucursal().ShowDialog();
+        }
+
+        private void listarSucursal_Click(object sender, EventArgs e)
+        {
+            new Sucursal.ListarSucursales().ShowDialog();
+        }
     }
 }

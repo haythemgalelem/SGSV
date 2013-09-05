@@ -7,7 +7,6 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-
 -- =============================================
 -- Author:		<Pablo Boalio>
 -- Create date: <24/08/2013>
@@ -18,6 +17,6 @@ CREATE Procedure [dbo_sgsv].[P_B_Sucursal]
  
  AS
 	    UPDATE  dbo_sgsv.Sucursal
-		SET		habilitado = '0'
+		SET		inhabilitado = '1'
 		WHERE	idSucursal = @idSucursal
 

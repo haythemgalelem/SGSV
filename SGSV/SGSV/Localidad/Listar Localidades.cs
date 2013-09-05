@@ -40,5 +40,6 @@ namespace SGSV.Localidad
             new frmEditarLocalidad().ShowDialog();
             Cargar();
         }
+
     }
 }
