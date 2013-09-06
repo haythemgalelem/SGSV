@@ -33,7 +33,7 @@ namespace SGSV.Entidades.Producto
                     select
                         new Marca
                             {
-                                IdMarca = Convert.ToInt32(marca["id_Marca"].ToString()),
+                                IdMarca = Convert.ToInt32(marca["idMarca"].ToString()),
                                 Nombre = marca["nombre"].ToString()
                             }).ToList();
         }

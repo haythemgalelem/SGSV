@@ -37,5 +37,25 @@ namespace SGSV
         {
             new Sucursal.ListarSucursales().ShowDialog();
         }
+
+        private void mniListarMarca_Click(object sender, EventArgs e)
+        {
+            new Producto.frmListarMarcas().ShowDialog();
+        }
+
+        private void mniCrearMarca_Click(object sender, EventArgs e)
+        {
+            new Producto.frmEditarMarca().ShowDialog();
+        }
+
+        private void mniCrearTipoProducto_Click(object sender, EventArgs e)
+        {
+            new Producto.frmEditarTipoProducto().ShowDialog();
+        }
+
+        private void mniListarTipoProducto_Click(object sender, EventArgs e)
+        {
+            new Producto.frmListarTiposProducto().ShowDialog();
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace SGSV.DAL
         public static void GuardarMarca(int idMarca, string nombre)
         {
             Exec<DataSet>("dbo_sgsv.P_IU_Marca", true,
-                "@idMarca", DALAux.GetValue(idMarca),
+                "@idMarca", idMarca,
                 "@nombre", DALAux.GetValue(nombre));
         }
 
@@ -32,12 +32,12 @@ namespace SGSV.DAL
 
         #region TipoProducto
 
-        public static DataTable GetTipoProductos()
+        public static DataTable GetTiposProducto()
         {
             return Exec<DataSet>("dbo_sgsv.P_S_TipoProducto", true).Tables[0];
         }
 
-        public static DataTable GetTipoProducto(string nombre)
+        public static DataTable GetTiposProducto(string nombre)
         {
             return Exec<DataSet>("dbo_sgsv.P_S_TipoProducto", true, "@nombre", DALAux.GetValue(nombre)).Tables[0];
         }
@@ -50,7 +50,7 @@ namespace SGSV.DAL
         public static void GuardarTipoProducto(int idTipoProducto, string nombre)
         {
             Exec<DataSet>("dbo_sgsv.P_IU_TipoProducto", true,
-                "@idTipoProducto", DALAux.GetValue(idTipoProducto),
+                "@idTipoProducto", idTipoProducto,
                 "@nombre", DALAux.GetValue(nombre));
         }
 
@@ -79,7 +79,7 @@ namespace SGSV.DAL
         public static void GuardarProducto(int idProducto, int idMarca, int idTipoProducto, string nombre, string observaciones)
         {
             Exec<DataSet>("dbo_sgsv.P_IU_Producto", true,
-                "@idProducto", DALAux.GetValue(idProducto),
+                "@idProducto", idProducto,
                 "@idMarca", DALAux.GetValue(idMarca),
                 "@idTipoProducto", DALAux.GetValue(idTipoProducto),
                 "@nombre", DALAux.GetValue(nombre),

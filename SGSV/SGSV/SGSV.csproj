@@ -56,6 +56,30 @@
     <Compile Include="Entidades\Producto\Producto.cs" />
     <Compile Include="Entidades\Producto\TipoProducto.cs" />
     <Compile Include="Entidades\Sucursal\Sucursal.cs" />
+    <Compile Include="Producto\Editar Marca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Editar Marca.Designer.cs">
+      <DependentUpon>Editar Marca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\Editar Tipo Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Editar Tipo Producto.Designer.cs">
+      <DependentUpon>Editar Tipo Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\Listar Marcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Listar Marcas.Designer.cs">
+      <DependentUpon>Listar Marcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\Listar Tipos Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Listar Tipos Producto.Designer.cs">
+      <DependentUpon>Listar Tipos Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="SGSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +118,19 @@
     <Compile Include="Sucursal\Modificar Sucursal.Designer.cs">
       <DependentUpon>Modificar Sucursal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ExtensionMethods.cs" />
+    <EmbeddedResource Include="Producto\Editar Marca.resx">
+      <DependentUpon>Editar Marca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Editar Tipo Producto.resx">
+      <DependentUpon>Editar Tipo Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Listar Marcas.resx">
+      <DependentUpon>Listar Marcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Listar Tipos Producto.resx">
+      <DependentUpon>Listar Tipos Producto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SGSV.resx">
       <DependentUpon>SGSV.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,9 +169,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Producto\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
