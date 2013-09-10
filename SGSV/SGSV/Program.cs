@@ -18,4 +18,12 @@ namespace SGSV
             Application.Run(new frmSGSV());
         }
     }
+
+    public partial class MasterForm : Form
+    {
+        public MasterForm()
+        {
+            base.BackColor = System.Drawing.Color.White;
+        }
+    }
 }

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using SGSV.DAL;
 
 namespace SGSV.Entidades.Producto
 {
+    [DefaultProperty("Nombre")]
     class Marca
     {
         public int IdMarca { get; set; }

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SGSV.Sucursal
 {
-    public partial class frmModificarSucursal : Form
+    public partial class frmModificarSucursal : MasterForm
     {
         public int idSucursal;
         public int idLocalidad;

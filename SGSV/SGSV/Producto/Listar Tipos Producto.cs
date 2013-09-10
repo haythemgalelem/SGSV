@@ -4,7 +4,7 @@ using SGSV.Producto;
 
 namespace SGSV.Producto
 {
-    public partial class frmListarTiposProducto : Form
+    public partial class frmListarTiposProducto : MasterForm
     {
         public frmListarTiposProducto()
         {

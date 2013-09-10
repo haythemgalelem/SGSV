@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace SGSV.Localidad
 {
-    public partial class frmEditarLocalidad : Form
+    public partial class frmEditarLocalidad : MasterForm
     {
         private Entidades.Localidad.Localidad localidad;
 
@@ -11,6 +11,7 @@ namespace SGSV.Localidad
         {
             InitializeComponent();
             localidad = new Entidades.Localidad.Localidad();
+            base.Text = "Crear Localidad";
         }
 
         public frmEditarLocalidad(int idLocalidad)

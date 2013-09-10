@@ -210,14 +210,14 @@
             // mniCrearTipoProducto
             // 
             this.mniCrearTipoProducto.Name = "mniCrearTipoProducto";
-            this.mniCrearTipoProducto.Size = new System.Drawing.Size(152, 24);
+            this.mniCrearTipoProducto.Size = new System.Drawing.Size(113, 24);
             this.mniCrearTipoProducto.Text = "Crear";
             this.mniCrearTipoProducto.Click += new System.EventHandler(this.mniCrearTipoProducto_Click);
             // 
             // mniListarTipoProducto
             // 
             this.mniListarTipoProducto.Name = "mniListarTipoProducto";
-            this.mniListarTipoProducto.Size = new System.Drawing.Size(152, 24);
+            this.mniListarTipoProducto.Size = new System.Drawing.Size(113, 24);
             this.mniListarTipoProducto.Text = "Listar";
             this.mniListarTipoProducto.Click += new System.EventHandler(this.mniListarTipoProducto_Click);
             // 
@@ -233,14 +233,16 @@
             // mniCrearProducto
             // 
             this.mniCrearProducto.Name = "mniCrearProducto";
-            this.mniCrearProducto.Size = new System.Drawing.Size(113, 24);
+            this.mniCrearProducto.Size = new System.Drawing.Size(152, 24);
             this.mniCrearProducto.Text = "Crear";
+            this.mniCrearProducto.Click += new System.EventHandler(this.mniCrearProducto_Click);
             // 
             // mniListarProducto
             // 
             this.mniListarProducto.Name = "mniListarProducto";
-            this.mniListarProducto.Size = new System.Drawing.Size(113, 24);
+            this.mniListarProducto.Size = new System.Drawing.Size(152, 24);
             this.mniListarProducto.Text = "Listar";
+            this.mniListarProducto.Click += new System.EventHandler(this.mniListarProducto_Click);
             // 
             // frmSGSV
             // 

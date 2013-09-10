@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace SGSV.Localidad
 {
-    public partial class frmListarLocalidades : Form
+    public partial class frmListarLocalidades : MasterForm
     {
         public frmListarLocalidades()
         {

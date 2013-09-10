@@ -62,6 +62,12 @@
     <Compile Include="Producto\Editar Marca.Designer.cs">
       <DependentUpon>Editar Marca.cs</DependentUpon>
     </Compile>
+    <Compile Include="Producto\Editar Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Editar Producto.Designer.cs">
+      <DependentUpon>Editar Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Producto\Editar Tipo Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,12 @@
     </Compile>
     <Compile Include="Producto\Listar Marcas.Designer.cs">
       <DependentUpon>Listar Marcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\Listar Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Listar Productos.Designer.cs">
+      <DependentUpon>Listar Productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Producto\Listar Tipos Producto.cs">
       <SubType>Form</SubType>
@@ -98,7 +110,9 @@
     <Compile Include="Localidad\Listar Localidades.Designer.cs">
       <DependentUpon>Listar Localidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Program.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sucursal\Crear Sucursal.cs">
       <SubType>Form</SubType>
@@ -122,11 +136,17 @@
     <EmbeddedResource Include="Producto\Editar Marca.resx">
       <DependentUpon>Editar Marca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Editar Producto.resx">
+      <DependentUpon>Editar Producto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Producto\Editar Tipo Producto.resx">
       <DependentUpon>Editar Tipo Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto\Listar Marcas.resx">
       <DependentUpon>Listar Marcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Listar Productos.resx">
+      <DependentUpon>Listar Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto\Listar Tipos Producto.resx">
       <DependentUpon>Listar Tipos Producto.cs</DependentUpon>
@@ -148,6 +168,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Sucursal\Crear Sucursal.resx">
       <DependentUpon>Crear Sucursal.cs</DependentUpon>
@@ -169,7 +190,15 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Busqueda 64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busqueda Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Limpiar Large.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

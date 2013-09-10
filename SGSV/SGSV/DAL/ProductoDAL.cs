@@ -80,10 +80,10 @@ namespace SGSV.DAL
         {
             Exec<DataSet>("dbo_sgsv.P_IU_Producto", true,
                 "@idProducto", idProducto,
-                "@idMarca", DALAux.GetValue(idMarca),
-                "@idTipoProducto", DALAux.GetValue(idTipoProducto),
-                "@nombre", DALAux.GetValue(nombre),
-                "@observaciones", DALAux.GetValue(observaciones));
+                "@idMarca", idMarca,
+                "@idTipoProducto", idTipoProducto,
+                "@nombre", nombre,
+                "@observaciones", observaciones);
         }
 
         #endregion Producto

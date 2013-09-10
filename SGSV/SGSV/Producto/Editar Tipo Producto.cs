@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace SGSV.Producto
 {
-    public partial class frmEditarTipoProducto : Form
+    public partial class frmEditarTipoProducto : MasterForm
     {
         private Entidades.Producto.TipoProducto tipoProducto;
 

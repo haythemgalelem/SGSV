@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace SGSV.Sucursal
 {
-    public partial class frmCrearSucursal : Form
+    public partial class frmCrearSucursal : MasterForm
     {
         public frmCrearSucursal()
         {

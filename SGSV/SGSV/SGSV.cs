@@ -11,7 +11,7 @@ using SGSV.Entidades;
 
 namespace SGSV
 {
-    public partial class frmSGSV : Form
+    public partial class frmSGSV : MasterForm
     {
         public frmSGSV()
         {
@@ -56,6 +56,16 @@ namespace SGSV
         private void mniListarTipoProducto_Click(object sender, EventArgs e)
         {
             new Producto.frmListarTiposProducto().ShowDialog();
+        }
+
+        private void mniCrearProducto_Click(object sender, EventArgs e)
+        {
+            new Producto.frmEditarProducto().ShowDialog();
+        }
+
+        private void mniListarProducto_Click(object sender, EventArgs e)
+        {
+            new Producto.frmListarProductos().ShowDialog();
         }
     }
 }
