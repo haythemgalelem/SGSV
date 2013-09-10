@@ -65,8 +65,133 @@ namespace SGSV.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Busqueda_Large {
             get {
-                object obj = ResourceManager.GetObject("Busqueda Large", resourceCulture);
+                object obj = ResourceManager.GetObject("Busqueda_Large", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Busqueda_Medium {
+            get {
+                object obj = ResourceManager.GetObject("Busqueda_Medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Busqueda_Small {
+            get {
+                object obj = ResourceManager.GetObject("Busqueda_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cancelar_Large {
+            get {
+                object obj = ResourceManager.GetObject("Cancelar_Large", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cancelar_Medium {
+            get {
+                object obj = ResourceManager.GetObject("Cancelar_Medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cancelar_Small {
+            get {
+                object obj = ResourceManager.GetObject("Cancelar_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Datos Incorrectos.
+        /// </summary>
+        internal static string DatosIncorrectos {
+            get {
+                return ResourceManager.GetString("DatosIncorrectos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guardar.
+        /// </summary>
+        internal static string Guardar {
+            get {
+                return ResourceManager.GetString("Guardar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guardar_Large {
+            get {
+                object obj = ResourceManager.GetObject("Guardar_Large", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guardar_Medium {
+            get {
+                object obj = ResourceManager.GetObject("Guardar_Medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guardar_Small {
+            get {
+                object obj = ResourceManager.GetObject("Guardar_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ingrese una Marca válida.
+        /// </summary>
+        internal static string IngresarMarca {
+            get {
+                return ResourceManager.GetString("IngresarMarca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ingrese un Nombre.
+        /// </summary>
+        internal static string IngresarNombre {
+            get {
+                return ResourceManager.GetString("IngresarNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ingrese un Tipo de Producto válido.
+        /// </summary>
+        internal static string IngresarTipoProducto {
+            get {
+                return ResourceManager.GetString("IngresarTipoProducto", resourceCulture);
             }
         }
         
@@ -75,8 +200,37 @@ namespace SGSV.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Limpiar_Large {
             get {
-                object obj = ResourceManager.GetObject("Limpiar Large", resourceCulture);
+                object obj = ResourceManager.GetObject("Limpiar_Large", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Limpiar_Medium {
+            get {
+                object obj = ResourceManager.GetObject("Limpiar_Medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Limpiar_Small {
+            get {
+                object obj = ResourceManager.GetObject("Limpiar_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se ha realizado la operación con éxito.
+        /// </summary>
+        internal static string OperaciónExitosa {
+            get {
+                return ResourceManager.GetString("OperaciónExitosa", resourceCulture);
             }
         }
     }

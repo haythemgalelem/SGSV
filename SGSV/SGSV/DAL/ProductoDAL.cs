@@ -63,12 +63,13 @@ namespace SGSV.DAL
             return Exec<DataSet>("dbo_sgsv.P_S_Producto", true).Tables[0];
         }
 
-        public static DataTable GetProductos(int idMarca, int idTipoProducto, string nombre)
+        public static DataTable GetProductos(int idMarca, int idTipoProducto, string nombre, string observaciones)
         {
             return Exec<DataSet>("dbo_sgsv.P_S_Producto", true,
                 "@idMarca", DALAux.GetValue(idMarca),
                 "@idTipoProducto", DALAux.GetValue(idTipoProducto),
-                "@nombre", DALAux.GetValue(nombre)).Tables[0];
+                "@nombre", DALAux.GetValue(nombre),
+                "@observaciones", DALAux.GetValue(observaciones)).Tables[0];
         }
 
         public static DataRow GetProducto(int idProducto)

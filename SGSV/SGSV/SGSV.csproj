@@ -199,6 +199,36 @@
   <ItemGroup>
     <None Include="Resources\Limpiar Large.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busqueda Medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busqueda Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar Medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar Medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Limpiar Medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Limpiar Small.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

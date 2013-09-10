@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using SGSV.Properties;
 
 namespace SGSV.Producto
 {
@@ -34,11 +35,13 @@ namespace SGSV.Producto
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            producto.Marca = listaMarcas.FirstOrDefault(m => m.Nombre == txtMarca.Text);
-            producto.TipoProducto = listaTiposProducto.FirstOrDefault(m => m.Nombre == txtTipoProducto.Text);
+            producto.Marca = listaMarcas.FirstOrDefault(m => m.Nombre.ToLower() == txtMarca.Text.ToLower());
+            producto.TipoProducto = listaTiposProducto.FirstOrDefault(m => m.Nombre.ToLower() == txtTipoProducto.Text.ToLower());
             producto.Nombre = txtNombre.Text;
             producto.Observaciones = txtObservaciones.Text;
+            if (!SonDatosValidos()) return;
             producto.Guardar();
+            MessageBox.Show(Resources.OperaciónExitosa, Resources.Guardar, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 
@@ -48,6 +51,27 @@ namespace SGSV.Producto
             txtMarca.AutoCompleteCustomSource.AddRange(listaMarcas.Select(m => m.Nombre).ToArray());
             listaTiposProducto = Entidades.Producto.TipoProducto.GetTiposProducto();
             txtTipoProducto.AutoCompleteCustomSource.AddRange(listaTiposProducto.Select(m => m.Nombre).ToArray());
+        }
+
+        protected bool SonDatosValidos()
+        {
+            if(producto.Marca == null)
+            {
+                MessageBox.Show(Resources.IngresarMarca, Resources.DatosIncorrectos, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (producto.TipoProducto == null)
+            {
+                MessageBox.Show(Resources.IngresarTipoProducto, Resources.DatosIncorrectos, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (producto.Nombre == string.Empty)
+            {
+                MessageBox.Show(Resources.IngresarNombre, Resources.DatosIncorrectos, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
         }
     }
 }

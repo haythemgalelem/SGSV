@@ -26,7 +26,8 @@ namespace SGSV.Localidad
         {
             try
             {
-                new frmEditarLocalidad(Convert.ToInt32(dgvLocalidades.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
+                var indice = dgvLocalidades.SelectedCells[0].RowIndex;
+                new frmEditarLocalidad(Convert.ToInt32(dgvLocalidades.Rows[indice].Cells[0].Value.ToString())).ShowDialog();
                 Cargar();
             }
             catch (Exception)

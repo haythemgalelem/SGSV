@@ -45,9 +45,9 @@ namespace SGSV.Entidades.Producto
                         new Producto(Convert.ToInt32(producto["idProducto"].ToString()))).ToList();
         }
 
-        public static IEnumerable<Producto> GetProductos(int idMarca, int idTipoProducto, string nombre)
+        public static IEnumerable<Producto> GetProductos(int idMarca, int idTipoProducto, string nombre, string observaciones)
         {
-            return (from DataRow producto in ProductoDAL.GetProductos(idMarca, idTipoProducto, nombre).Rows
+            return (from DataRow producto in ProductoDAL.GetProductos(idMarca, idTipoProducto, nombre, observaciones).Rows
                     select
                         new Producto(Convert.ToInt32(producto["idProducto"].ToString()))).ToList();
         }

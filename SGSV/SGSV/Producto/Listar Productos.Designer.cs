@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListarProductos));
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.menuProducto = new System.Windows.Forms.MenuStrip();
             this.mnuCrearProducto = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,7 @@
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.Size = new System.Drawing.Size(943, 466);
-            this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.TabIndex = 6;
             // 
             // menuProducto
             // 
@@ -103,12 +104,12 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Image = global::SGSV.Properties.Resources.Limpiar_Large;
+            this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLimpiar.Location = new System.Drawing.Point(777, 23);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(82, 82);
-            this.btnLimpiar.TabIndex = 19;
+            this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -116,12 +117,12 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::SGSV.Properties.Resources.Busqueda_Large;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuscar.Location = new System.Drawing.Point(678, 23);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(82, 82);
-            this.btnBuscar.TabIndex = 18;
+            this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -144,7 +145,7 @@
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(181, 55);
-            this.txtObservaciones.TabIndex = 16;
+            this.txtObservaciones.TabIndex = 3;
             // 
             // lblTipoProducto
             // 
@@ -157,14 +158,14 @@
             // 
             // txtTipoProducto
             // 
-            this.txtTipoProducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtTipoProducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtTipoProducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTipoProducto.Location = new System.Drawing.Point(140, 49);
             this.txtTipoProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTipoProducto.MaxLength = 100;
             this.txtTipoProducto.Name = "txtTipoProducto";
             this.txtTipoProducto.Size = new System.Drawing.Size(181, 22);
-            this.txtTipoProducto.TabIndex = 14;
+            this.txtTipoProducto.TabIndex = 1;
             // 
             // lblMarca
             // 
@@ -177,14 +178,14 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtMarca.Location = new System.Drawing.Point(140, 23);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMarca.MaxLength = 100;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(181, 22);
-            this.txtMarca.TabIndex = 12;
+            this.txtMarca.TabIndex = 0;
             // 
             // lblNombre
             // 
@@ -202,15 +203,14 @@
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(181, 22);
-            this.txtNombre.TabIndex = 10;
+            this.txtNombre.TabIndex = 2;
             // 
             // frmListarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(943, 630);
+            this.ClientSize = new System.Drawing.Size(943, 629);
             this.Controls.Add(this.pnlFiltros);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.menuProducto);

@@ -27,7 +27,8 @@ namespace SGSV.Producto
         {
             try
             {
-                new frmEditarTipoProducto(Convert.ToInt32(dgvTiposProducto.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
+                var indice = dgvTiposProducto.SelectedCells[0].RowIndex;
+                new frmEditarTipoProducto(Convert.ToInt32(dgvTiposProducto.Rows[indice].Cells[0].Value.ToString())).ShowDialog();
                 Cargar();
             }
             catch (Exception)

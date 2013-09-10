@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Forms;
-using SGSV.DAL;
-using SGSV.Producto;
 using SGSV.Utils;
 
 namespace SGSV.Producto
@@ -37,15 +34,9 @@ namespace SGSV.Producto
 
         private void mnuModificarProducto_Click(object sender, EventArgs e)
         {
-            try
-            {
-                new frmEditarProducto(Convert.ToInt32(dgvProductos.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog();
-                Cargar();
-            }
-            catch (Exception)
-            {
-                
-            }
+            var indice = dgvProductos.SelectedCells[0].RowIndex;
+            new frmEditarProducto(Convert.ToInt32(dgvProductos.Rows[indice].Cells[0].Value.ToString())).ShowDialog();
+            Cargar();
         }
 
         private void mnuCrearProducto_Click(object sender, EventArgs e)
@@ -56,11 +47,12 @@ namespace SGSV.Producto
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            var marca = listaMarcas.FirstOrDefault(m => m.Nombre == txtMarca.Text);
-            var tipoProducto = listaTiposProducto.FirstOrDefault(p => p.Nombre == txtTipoProducto.Text);
+            var marca = listaMarcas.FirstOrDefault(m => m.Nombre.ToLower() == txtMarca.Text.ToLower());
+            var tipoProducto = listaTiposProducto.FirstOrDefault(p => p.Nombre.ToLower() == txtTipoProducto.Text.ToLower());
             dgvProductos.DataSource = Entidades.Producto.Producto.GetProductos(marca != null ? marca.IdMarca : 0,
                                                                                tipoProducto != null ? tipoProducto.IdTipoProducto : 0,
-                                                                               txtNombre.Text);
+                                                                               txtNombre.Text,
+                                                                               txtObservaciones.Text);
             dgvProductos.Columns[0].Visible = false;
             dgvProductos.Columns[1].Visible = false;
             dgvProductos.Columns[3].Visible = false;
