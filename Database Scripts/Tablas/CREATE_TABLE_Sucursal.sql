@@ -25,7 +25,7 @@ CREATE TABLE [dbo_sgsv].[Sucursal](
 	[direccion] [varchar](100) NOT NULL,
 	[telefono] [nvarchar](30) NOT NULL,
 	[email] [varchar](50) NOT NULL,
-	[codigo_postal] [varchar](15) NOT NULL,
+	[codigoPostal] [varchar](15) NOT NULL,
 	[habilitado] [char] default '1' check (habilitado = '0' OR habilitado = '1')
  CONSTRAINT [PK_Sucursal] PRIMARY KEY CLUSTERED 
 (

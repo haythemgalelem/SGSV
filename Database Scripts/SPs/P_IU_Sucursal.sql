@@ -20,7 +20,7 @@ CREATE Procedure [dbo_sgsv].[P_IU_Sucursal]
  @idLocalidad int,
  @telefono nvarchar(30),
  @email varchar(50),
- @codigo_postal varchar(15)
+ @codigoPostal varchar(15)
 
  AS
 
@@ -33,8 +33,8 @@ IF @idSucursal = 0
 					WHERE	nombre = @nombre)
 BEGIN
 	INSERT INTO dbo_sgsv.Sucursal
-	(nombre, direccion, idLocalidad, telefono, email, codigo_postal)
-	VALUES(@nombre, @direccion, @idLocalidad, @telefono, @email, @codigo_postal)
+	(nombre, direccion, idLocalidad, telefono, email, codigoPostal)
+	VALUES(@nombre, @direccion, @idLocalidad, @telefono, @email, @codigoPostal)
 END
 
 ELSE
@@ -49,7 +49,7 @@ BEGIN
 				idLocalidad = @idLocalidad,
 		        telefono = @telefono,
 		        email    = @email,
-		        codigo_postal = @codigo_postal
+		        codigoPostal = @codigoPostal
 		        
 		WHERE	idSucursal = @idSucursal
 	END

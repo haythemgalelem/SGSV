@@ -169,6 +169,42 @@ namespace SGSV.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ingrese un Código Postal válido.
+        /// </summary>
+        internal static string IngresarCodigoPostal {
+            get {
+                return ResourceManager.GetString("IngresarCodigoPostal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ingrese una Dirección válida.
+        /// </summary>
+        internal static string IngresarDirección {
+            get {
+                return ResourceManager.GetString("IngresarDirección", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ingrese un Email válido.
+        /// </summary>
+        internal static string IngresarEmail {
+            get {
+                return ResourceManager.GetString("IngresarEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ingrese una Localidad válida.
+        /// </summary>
+        internal static string IngresarLocalidad {
+            get {
+                return ResourceManager.GetString("IngresarLocalidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ingrese una Marca válida.
         /// </summary>
         internal static string IngresarMarca {
@@ -183,6 +219,15 @@ namespace SGSV.Properties {
         internal static string IngresarNombre {
             get {
                 return ResourceManager.GetString("IngresarNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ingrese un Teléfono válido.
+        /// </summary>
+        internal static string IngresarTeléfono {
+            get {
+                return ResourceManager.GetString("IngresarTeléfono", resourceCulture);
             }
         }
         

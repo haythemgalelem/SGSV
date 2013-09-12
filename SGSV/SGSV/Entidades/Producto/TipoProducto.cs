@@ -7,7 +7,6 @@ using SGSV.DAL;
 
 namespace SGSV.Entidades.Producto
 {
-    [DefaultProperty("Nombre")]
     class TipoProducto
     {
         public int IdTipoProducto { get; set; }

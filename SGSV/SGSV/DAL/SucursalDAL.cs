@@ -1,84 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
+﻿using System.Data;
 
 namespace SGSV.DAL
 {
     class SucursalDAL : ClsDAL
     {
-
-        public static void Guardar(int idSucursal, string nombre, string direccion, int idLocalidad, string telefono, string email, string codigoPostal)
+        public static DataTable GetSucursales()
         {
-            Exec<DataSet>("dbo_sgsv.P_IU_Sucursal", true, "@idSucursal", idSucursal,
-                                                          "@nombre", nombre,
-                                                          "@direccion", direccion,
-                                                          "@idLocalidad", idLocalidad, 
-                                                          "@telefono", telefono,
-                                                          "@email", email,
-                                                          "@codigo_postal", codigoPostal);
+            return Exec<DataSet>("dbo_sgsv.P_S_Sucursal", true).Tables[0];
         }
 
-        public static IEnumerable<Entidades.Sucursal.Sucursal> GetLocalidadesSinFiltro()
+        public static DataTable GetSucursales(int idLocalidad, string nombre, string direccion, string telefono, string email, string codigoPostal)
         {
-            return (from DataRow sucursal in Exec<DataSet>("dbo_sgsv.P_S_Sucursal", true, "@inhabilitado", '0').Tables[0].Rows
-                    select new Entidades.Sucursal.Sucursal
-                    {   idSucursal = Convert.ToInt32(sucursal["idSucursal"].ToString()),
-                        idLocalidad = Convert.ToInt32(sucursal["idLocalidad"].ToString()),
-                        nombre = sucursal["nombreSucursal"].ToString(),
-                        direccion = sucursal["direccion"].ToString(),
-                        localidad = sucursal["nombreLocalidad"].ToString(),
-                        telefono = sucursal["telefono"].ToString(),
-                        codigoPostal = sucursal["codigoPostal"].ToString(),
-                        email = sucursal["email"].ToString(),
-                        inhabilitado = sucursal["inhabilitado"].ToString()
-                    }).ToList();
+            return Exec<DataSet>("dbo_sgsv.P_S_Sucursal", true,
+                "@idLocalidad", DALAux.GetValue(idLocalidad),
+                "@nombre", DALAux.GetValue(nombre),
+                "@direccion", DALAux.GetValue(direccion),
+                "@telefono", DALAux.GetValue(telefono),
+                "@email", DALAux.GetValue(email),
+                "@codigoPostal", DALAux.GetValue(codigoPostal)).Tables[0];
         }
 
-        public static IEnumerable<Entidades.Sucursal.Sucursal> GetLocalidadesConFiltro(int idLocalidad, char flagInhabilitado)
+        public static DataRow GetSucursal(int idSucursal)
         {
-            if(flagInhabilitado == '0')
-            {
-                return
-                    (from DataRow sucursal in Exec<DataSet>("dbo_sgsv.P_S_Sucursal", true, "@idLocalidad", idLocalidad,
-                                                            "@inhabilitado", flagInhabilitado).Tables[0].Rows
-                     select new Entidades.Sucursal.Sucursal
-                                {
-                                    idSucursal = Convert.ToInt32(sucursal["idSucursal"].ToString()),
-                                    idLocalidad = Convert.ToInt32(sucursal["idLocalidad"].ToString()),
-                                    nombre = sucursal["nombreSucursal"].ToString(),
-                                    direccion = sucursal["direccion"].ToString(),
-                                    localidad = sucursal["nombreLocalidad"].ToString(),
-                                    telefono = sucursal["telefono"].ToString(),
-                                    codigoPostal = sucursal["codigoPostal"].ToString(),
-                                    email = sucursal["email"].ToString(),
-                                    inhabilitado = sucursal["inhabilitado"].ToString()
-                                }).ToList();
-
-            }else
-            {
-                return
-                    (from DataRow sucursal in Exec<DataSet>("dbo_sgsv.P_S_Sucursal", true, "@idLocalidad", idLocalidad).Tables[0].Rows
-                     select new Entidades.Sucursal.Sucursal
-                     {
-                         idSucursal = Convert.ToInt32(sucursal["idSucursal"].ToString()),
-                         idLocalidad = Convert.ToInt32(sucursal["idLocalidad"].ToString()),
-                         nombre = sucursal["nombreSucursal"].ToString(),
-                         direccion = sucursal["direccion"].ToString(),
-                         localidad = sucursal["nombreLocalidad"].ToString(),
-                         telefono = sucursal["telefono"].ToString(),
-                         codigoPostal = sucursal["codigoPostal"].ToString(),
-                         email = sucursal["email"].ToString(),
-                         inhabilitado = sucursal["inhabilitado"].ToString()
-                     }).ToList();                
-            }
+            return Exec<DataSet>("dbo_sgsv.P_S_Sucursal", true, "@idSucursal", DALAux.GetValue(idSucursal)).Tables[0].Rows[0];
         }
 
-        public static void BajaLogicaSucursal(int idSucursal)
+        public static void GuardarSucursal(int idSucursal, int idLocalidad, string nombre, string direccion, string telefono, string email, string codigoPostal)
         {
-            Exec<DataSet>("dbo_sgsv.P_B_Sucursal", true, "@idSucursal", idSucursal);
+            Exec<DataSet>("dbo_sgsv.P_IU_Sucursal", true,
+                "@idSucursal", idSucursal,
+                "@idLocalidad", idLocalidad,
+                "@nombre", nombre,
+                "@direccion", direccion,
+                "@telefono", telefono,
+                "@email", email,
+                "@codigoPostal", codigoPostal);
         }
-
     }
 }

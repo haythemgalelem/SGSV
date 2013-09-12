@@ -172,4 +172,19 @@
   <data name="DatosIncorrectos">
     <value xml:space="preserve">Datos Incorrectos</value>
   </data>
+  <data name="IngresarLocalidad">
+    <value xml:space="preserve">Ingrese una Localidad válida</value>
+  </data>
+  <data name="IngresarDirección">
+    <value xml:space="preserve">Ingrese una Dirección válida</value>
+  </data>
+  <data name="IngresarTeléfono">
+    <value xml:space="preserve">Ingrese un Teléfono válido</value>
+  </data>
+  <data name="IngresarEmail">
+    <value xml:space="preserve">Ingrese un Email válido</value>
+  </data>
+  <data name="IngresarCodigoPostal">
+    <value xml:space="preserve">Ingrese un Código Postal válido</value>
+  </data>
 </root>

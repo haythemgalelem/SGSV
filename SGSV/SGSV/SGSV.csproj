@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\SucursalDAL.cs" />
     <Compile Include="DAL\clsDAL.cs" />
     <Compile Include="DAL\DALAux.cs" />
     <Compile Include="DAL\LocalidadDAL.cs" />
     <Compile Include="DAL\ProductoDAL.cs" />
+    <Compile Include="DAL\SucursalDAL.cs" />
     <Compile Include="Entidades\Localidad\Localidad.cs" />
     <Compile Include="Entidades\Producto\Marca.cs" />
     <Compile Include="Entidades\Producto\Producto.cs" />
@@ -114,23 +114,17 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sucursal\Crear Sucursal.cs">
+    <Compile Include="Sucursal\Editar Sucursal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sucursal\Crear Sucursal.Designer.cs">
-      <DependentUpon>Crear Sucursal.cs</DependentUpon>
+    <Compile Include="Sucursal\Editar Sucursal.Designer.cs">
+      <DependentUpon>Editar Sucursal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sucursal\ListarSucursales.cs">
+    <Compile Include="Sucursal\Listar Sucursales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sucursal\ListarSucursales.Designer.cs">
-      <DependentUpon>ListarSucursales.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sucursal\Modificar Sucursal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sucursal\Modificar Sucursal.Designer.cs">
-      <DependentUpon>Modificar Sucursal.cs</DependentUpon>
+    <Compile Include="Sucursal\Listar Sucursales.Designer.cs">
+      <DependentUpon>Listar Sucursales.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\ExtensionMethods.cs" />
     <EmbeddedResource Include="Producto\Editar Marca.resx">
@@ -170,14 +164,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Sucursal\Crear Sucursal.resx">
-      <DependentUpon>Crear Sucursal.cs</DependentUpon>
+    <EmbeddedResource Include="Sucursal\Editar Sucursal.resx">
+      <DependentUpon>Editar Sucursal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sucursal\ListarSucursales.resx">
-      <DependentUpon>ListarSucursales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sucursal\Modificar Sucursal.resx">
-      <DependentUpon>Modificar Sucursal.cs</DependentUpon>
+    <EmbeddedResource Include="Sucursal\Listar Sucursales.resx">
+      <DependentUpon>Listar Sucursales.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
@@ -228,6 +219,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Limpiar Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entidades\Empleado\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

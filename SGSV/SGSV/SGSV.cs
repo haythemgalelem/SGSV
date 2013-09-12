@@ -30,12 +30,12 @@ namespace SGSV
 
         private void crearSucursal_Click(object sender, EventArgs e)
         {
-            new Sucursal.frmCrearSucursal().ShowDialog();
+            new Sucursal.frmEditarSucursal().ShowDialog();
         }
 
         private void listarSucursal_Click(object sender, EventArgs e)
         {
-            new Sucursal.ListarSucursales().ShowDialog();
+            new Sucursal.frmListarSucursales().ShowDialog();
         }
 
         private void mniListarMarca_Click(object sender, EventArgs e)

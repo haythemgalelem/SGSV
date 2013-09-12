@@ -1,48 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using SGSV.DAL;
 
 namespace SGSV.Entidades.Sucursal
 {
     class Sucursal
     {
+        public int IdSucursal { get; set; }
+        public Localidad.Localidad Localidad { get; set; }
+        [DisplayName("Localidad")]
+        public string NombreLocalidad { get { return Localidad != null ? Localidad.Nombre : ""; } }
+        public string Nombre { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public string Email { get; set; }
+        public string CodigoPostal { get; set; }
 
-        public int idSucursal { get; set; }
-        public int idLocalidad { get; set; }
-        public string nombre  { get; set; }
-        public string direccion { get; set; }
-        public string telefono { get; set; }
-        public string email { get; set; }
-        public string codigoPostal { get; set; }
-        public string localidad { get; set; }
-        public string inhabilitado { get; set; }
-
-        public void guardarSucursal()
+        public Sucursal()
         {
-            SucursalDAL.Guardar(idSucursal,nombre,direccion,idLocalidad,telefono,email,codigoPostal);
         }
 
-        public static IEnumerable<Sucursal> GetSucursalesSinFiltro()
+        public Sucursal(int idSucursal)
         {
-            return SucursalDAL.GetLocalidadesSinFiltro();
+            Cargar(idSucursal);
         }
 
-        public static IEnumerable<Sucursal> GetSucursalesConFiltro(int idLocalidad, char flagInhabilitado)
+        public void Cargar(int idSucursal)
         {
-            return SucursalDAL.GetLocalidadesConFiltro(idLocalidad, flagInhabilitado);
+            var sucursal = SucursalDAL.GetSucursal(idSucursal);
+            IdSucursal = Convert.ToInt32(sucursal["idSucursal"].ToString());
+            Localidad = new Localidad.Localidad(Convert.ToInt32(sucursal["idLocalidad"].ToString()));
+            Nombre = sucursal["nombre"].ToString();
+            Direccion = sucursal["direccion"].ToString();
+            Telefono = sucursal["telefono"].ToString();
+            Email = sucursal["email"].ToString();
+            CodigoPostal = sucursal["codigoPostal"].ToString();
         }
 
-        public static void BajaLogicaSucursal(int idSucursal)
+        public static IEnumerable<Sucursal> GetSucursales()
         {
-            SucursalDAL.BajaLogicaSucursal(idSucursal);
+            return (from DataRow sucursal in SucursalDAL.GetSucursales().Rows
+                    select
+                        new Sucursal(Convert.ToInt32(sucursal["idSucursal"].ToString()))).ToList();
         }
 
-        public static void RealizarCambiosSucursal(int idSucursal, int idLocalidad, string nombre, string direccion, string telefono, string codigoPostal, string email)
+        public static IEnumerable<Sucursal> GetSucursales(int idLocalidad, string nombre, string direccion, string telefono, string email, string codigoPostal)
         {
-            SucursalDAL.Guardar(idSucursal, nombre, direccion, idLocalidad, telefono, email, codigoPostal);
+            return (from DataRow sucursal in SucursalDAL.GetSucursales(idLocalidad, nombre, direccion, telefono, email, codigoPostal).Rows
+                    select
+                        new Sucursal(Convert.ToInt32(sucursal["idSucursal"].ToString()))).ToList();
+        }
+
+        public void Guardar()
+        {
+            SucursalDAL.GuardarSucursal(IdSucursal, Localidad.IdLocalidad, Nombre, Direccion, Telefono, Email, CodigoPostal);
         }
     }
 }
