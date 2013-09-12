@@ -63,6 +63,36 @@ namespace SGSV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Agregar_Large {
+            get {
+                object obj = ResourceManager.GetObject("Agregar_Large", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Agregar_Medium {
+            get {
+                object obj = ResourceManager.GetObject("Agregar_Medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Agregar_Small {
+            get {
+                object obj = ResourceManager.GetObject("Agregar_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Busqueda_Large {
             get {
                 object obj = ResourceManager.GetObject("Busqueda_Large", resourceCulture);
@@ -271,11 +301,71 @@ namespace SGSV.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Modificar_Large {
+            get {
+                object obj = ResourceManager.GetObject("Modificar_Large", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Modificar_Medium {
+            get {
+                object obj = ResourceManager.GetObject("Modificar_Medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Modificar_Small {
+            get {
+                object obj = ResourceManager.GetObject("Modificar_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Se ha realizado la operación con éxito.
         /// </summary>
         internal static string OperaciónExitosa {
             get {
                 return ResourceManager.GetString("OperaciónExitosa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Reset_Large {
+            get {
+                object obj = ResourceManager.GetObject("Reset_Large", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Reset_Medium {
+            get {
+                object obj = ResourceManager.GetObject("Reset_Medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Reset_Small {
+            get {
+                object obj = ResourceManager.GetObject("Reset_Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

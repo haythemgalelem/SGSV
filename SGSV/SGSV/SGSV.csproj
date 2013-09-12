@@ -182,9 +182,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Busqueda 64x64.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Busqueda Large.png" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +219,33 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entidades\Empleado\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar Medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modificar Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modificar Medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modificar Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset Medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset Small.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

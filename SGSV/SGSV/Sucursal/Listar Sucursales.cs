@@ -30,19 +30,6 @@ namespace SGSV.Sucursal
             dgvSucursales.Columns[7].Width = 150;
         }
 
-        private void mnuModificarSucursal_Click(object sender, EventArgs e)
-        {
-            var indice = dgvSucursales.SelectedCells[0].RowIndex;
-            new frmEditarSucursal(Convert.ToInt32(dgvSucursales.Rows[indice].Cells[0].Value.ToString())).ShowDialog();
-            Cargar();
-        }
-
-        private void mnuCrearSucursal_Click(object sender, EventArgs e)
-        {
-            new frmEditarSucursal().ShowDialog();
-            Cargar();
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             var localidad = listaLocalidades.FirstOrDefault(m => m.Nombre.ToLower() == txtLocalidad.Text.ToLower());
@@ -64,12 +51,36 @@ namespace SGSV.Sucursal
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            Limpiar();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            new frmEditarSucursal().ShowDialog();
+            Cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            var indice = dgvSucursales.SelectedCells[0].RowIndex;
+            new frmEditarSucursal(Convert.ToInt32(dgvSucursales.Rows[indice].Cells[0].Value.ToString())).ShowDialog();
+            Cargar();
+        }
+
+        protected void Limpiar()
+        {
             txtLocalidad.Limpiar();
             txtNombre.Limpiar();
             txtDireccion.Limpiar();
             txtTelefono.Limpiar();
             txtEmail.Limpiar();
             txtCodigoPostal.Limpiar();
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            Cargar();
         }
 
     }

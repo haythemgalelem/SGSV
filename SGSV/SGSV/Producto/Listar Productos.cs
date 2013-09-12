@@ -32,19 +32,6 @@ namespace SGSV.Producto
             dgvProductos.Columns[6].Width = 400;
         }
 
-        private void mnuModificarProducto_Click(object sender, EventArgs e)
-        {
-            var indice = dgvProductos.SelectedCells[0].RowIndex;
-            new frmEditarProducto(Convert.ToInt32(dgvProductos.Rows[indice].Cells[0].Value.ToString())).ShowDialog();
-            Cargar();
-        }
-
-        private void mnuCrearProducto_Click(object sender, EventArgs e)
-        {
-            new frmEditarProducto().ShowDialog();
-            Cargar();
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             var marca = listaMarcas.FirstOrDefault(m => m.Nombre.ToLower() == txtMarca.Text.ToLower());
@@ -63,6 +50,30 @@ namespace SGSV.Producto
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            new frmEditarProducto().ShowDialog();
+            Cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            var indice = dgvProductos.SelectedCells[0].RowIndex;
+            new frmEditarProducto(Convert.ToInt32(dgvProductos.Rows[indice].Cells[0].Value.ToString())).ShowDialog();
+            Cargar();
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            Cargar();
+        }
+
+        protected void Limpiar()
         {
             txtMarca.Limpiar();
             txtTipoProducto.Limpiar();
